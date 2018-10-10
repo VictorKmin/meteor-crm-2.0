@@ -1,6 +1,14 @@
 <template name="showAllServices">
-    {{#each services}}
-        {{title}} <br>{{description}}
-        ___________________________
-    {{/each}}
+    <div id="allServices">
+        {{#each services}}
+            <div class="oneService">
+                <h2>{{title}}</h2>
+                <br>
+                <span class="description"> {{description}} </span>
+                <br>
+                <button id="deleteService"> DELETE </button>
+                <button id="updateService"> UPDATE </button>
+            </div>
+        {{/each}}
+    </div>
 </template>

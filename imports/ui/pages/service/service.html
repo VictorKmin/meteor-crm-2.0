@@ -1,5 +1,8 @@
 <template name="App_service">
-    {{> addServiceForm}}
-    {{> showAllServices}}
-
+    {{#if currentUser}}
+        {{> addServiceForm}}
+        {{> showAllServices}}
+        {{else}}
+        U are not logged
+    {{/if}}
 </template>
